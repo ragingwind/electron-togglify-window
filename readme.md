@@ -2,6 +2,8 @@
 
 > Add toggle feature to window. You can make a toggle-able window
 
+![](https://cloud.githubusercontent.com/assets/124117/10804677/0ef6c2d0-7e0c-11e5-93a9-0e47c79df5d7.gif)
+
 ## Install
 
 ```
