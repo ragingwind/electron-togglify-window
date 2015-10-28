@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Electron boilerplate</title>
+		<link rel="stylesheet" href="index.css">
+		<script type="text/javascript">
+			var ipc = require('ipc');
+
+			function change(e) {
+				// send event with current animation
+				ipc.send('change-animation', e.dataset.animation);
+
+				// change animation type
+				var animation = e.dataset.animation === 'hide' ? 'scale' : 'hide';
+				e.value = 'Change animation to ' + animation;
+				e.dataset.animation = animation;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Electron boilerplate</h1>
+				<div>
+					Using Command+Shift+' to show how to work animation.
+				</div>
+				<div>
+					<input type="button" name="change-animation" value="Change Animation to `hide`"
+								data-animation='hide' onclick="change(this);">
+				</div>
+			</header>
+			<section class="main">
+			</section>
+			<footer></footer>
+		</div>
+	</body>
+</html>

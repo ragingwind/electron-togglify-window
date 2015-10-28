@@ -1,0 +1,47 @@
+{
+  "name": "electron-togglify-window",
+  "version": "0.0.0",
+  "description": "Set toggle function to Browser Window",
+  "license": "MIT",
+  "repository": "ragingwind/electron-togglify-window",
+  "author": {
+    "name": "ragingwind",
+    "email": "ragingwind@gmail.com",
+    "url": "ragingwind.me"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "start": "electron ./demo"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "electron",
+    "toggle",
+    "electron-togglify-window"
+  ],
+  "dependencies": {
+    "object-assign": "^4.0.1"
+  },
+  "devDependencies": {
+    "electron-debug": "^0.2.1",
+    "electron-packager": "^5.0.0",
+    "electron-prebuilt": "^0.34.0",
+    "electron-shortcut-loader": "^0.1.1",
+    "xo": "^0.7.1"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node"
+    ]
+  },
+  "jshintConfig": {
+    "esnext": true,
+    "node": true
+  }
+}
