@@ -1,6 +1,6 @@
 {
   "name": "electron-togglify-window",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Set toggle function to Browser Window",
   "license": "MIT",
   "repository": "ragingwind/electron-togglify-window",
