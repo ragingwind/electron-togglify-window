@@ -3,7 +3,7 @@
 const oassign = require('object-assign');
 
 // Delegate function for animation of window set toggle
-function ToogleAnimation(target, animation) {
+function ToggleAnimation(target, animation) {
 	var preset = {
 		hide: {
 			hide: 'hide',
@@ -28,26 +28,26 @@ function ToogleAnimation(target, animation) {
 	}
 }
 
-ToogleAnimation.prototype.run = function (action) {
+ToggleAnimation.prototype.run = function (action) {
 	action = this._preset[action];
 	if (action) {
 		this._target[action]();
 	}
 };
 
-ToogleAnimation.prototype.hide = function () {
+ToggleAnimation.prototype.hide = function () {
 	this.run('hide');
 };
 
-ToogleAnimation.prototype.focus = function () {
+ToggleAnimation.prototype.focus = function () {
 	this.run('focus');
 };
 
-ToogleAnimation.prototype.restore = function () {
+ToggleAnimation.prototype.restore = function () {
 	this.run('restore');
 };
 
-ToogleAnimation.prototype.blur = function () {
+ToggleAnimation.prototype.blur = function () {
 	this.run('blur');
 };
 
@@ -58,7 +58,7 @@ function togglify(win, opts) {
 		animation: 'hide'
 	}, opts);
 
-	win._toggleAction = new ToogleAnimation(win, opts.animation);
+	win._toggleAction = new ToggleAnimation(win, opts.animation);
 
 	// patch toggle function to window
 	win.toggle = function () {
@@ -84,5 +84,5 @@ function togglify(win, opts) {
 module.exports = togglify;
 
 module.exports.changeAnimation = function (win, animation) {
-	win._toggleAction = new ToogleAnimation(win, animation);
+	win._toggleAction = new ToggleAnimation(win, animation);
 };
