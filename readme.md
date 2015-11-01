@@ -1,4 +1,4 @@
-# electron-toggle-window
+# electron-togglify-window
 
 > Add toggle feature to window. You can make a toggle-able window
 
